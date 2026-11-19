@@ -1,5 +1,6 @@
 package com.example.djurvard
 
+import com.example.djurvard.ui.screens.WelcomeScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,6 +20,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DjurvårdTheme {
+                WelcomeScreen()
 
             }
         }
