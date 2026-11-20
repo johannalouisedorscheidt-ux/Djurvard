@@ -20,7 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen (onStartClick: () -> Unit) {
 
     Box(
         modifier = Modifier.fillMaxSize()
@@ -32,7 +32,7 @@ fun WelcomeScreen() {
             contentScale = ContentScale.Fit
         )
 
-        // Välkomsttexten placeras ovanför hundens huvud
+        // Välkomsttexten placeras ovanför djuren på startskärmen
         Text(
             text = "Välkommen till djur appen",
             modifier = Modifier
@@ -43,9 +43,9 @@ fun WelcomeScreen() {
             fontWeight = FontWeight.Bold
         )
 
-// Startknappen placeras i mitten
+        // Startknappen placeras i mitten på startskärmen
         Button(
-            onClick = { },
+            onClick = onStartClick,
             modifier = Modifier.align(Alignment.Center)
         ) {
             Text(text = "Start")
